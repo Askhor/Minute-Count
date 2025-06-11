@@ -8,7 +8,7 @@ from mutagen.mp3 import MP3, HeaderNotFoundError
 from minute_count.terminal_formatting import add_color, hide_temp, print_temp
 from minute_count.time_formatting import format_time
 
-_valid_extension_re  = re.compile(".(mp3|aac|m4a|mp4)")
+_valid_extension_re  = re.compile("\\.(mp3|aac|m4a|mp4)")
 
 def _generate_overview(path: Path, seconds: float, seconds_precision):
     print(f"{_highlight_path_end(path)}: {add_color(2, format_time(seconds, seconds_precision))}")
